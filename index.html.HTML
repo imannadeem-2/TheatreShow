@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheatreShow.com — Where Stories Come Alive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style4.css">
+  <script src="script4.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="logo-icon">🎭</div>
+    <span>TheatreShow</span>
+  </a>
+
+  <!-- Hamburger for mobile -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#shows">Shows</a></li>
+    <li><a href="#auditoriums">Auditoriums</a></li>
+    <li><a href="#artists">Artists</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#upcoming">Upcoming</a></li>
+    <li><a href="#magazines">Magazines</a></li>
+    <li><a href="#feedback">Contact</a></li>
+  </ul>
+
+  <button class="nav-cta" onclick="openBooking('Featured Show')">Book Now</button>
+</nav>
+
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section id="hero">
+  <div class="hero-content">
+    <p class="hero-tag">Est. 2024 &nbsp;·&nbsp; Karachi, Pakistan</p>
+    <h1 class="hero-title">
+      Where Stories
+      <em>Come Alive</em>
+      On Stage
+    </h1>
+    <p class="hero-subtitle">
+      Pakistan's premier platform for Urdu, Hindi &amp; English theatre —
+      discover shows, venues, artists, and the magic of live performance.
+    </p>
+    <div class="hero-btns">
+      <a href="#upcoming" class="btn-primary">Explore &amp; Book</a>
+      <a href="#artists" class="btn-outline">Meet the Artists</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">120+</div>
+      <div class="stat-label">Live Shows</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">48</div>
+      <div class="stat-label">Artists</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">12</div>
+      <div class="stat-label">Venues</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TICKER BAR
+============================================================ -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">Anarkali — Urdu Drama</span>
+    <span class="ticker-item">Hamlet Reimagined — English</span>
+    <span class="ticker-item">Mughal-e-Azam — Hindi Epic</span>
+    <span class="ticker-item">Sassi Punnu — Sindhi Folk</span>
+    <span class="ticker-item">Heer Ranjha — Punjabi Drama</span>
+    <span class="ticker-item">Mirza Ghalib — Hindi Drama</span>
+    <span class="ticker-item">A Midsummer Night's Dream — English</span>
+    <span class="ticker-item">Anarkali — Urdu Drama</span>
+    <span class="ticker-item">Hamlet Reimagined — English</span>
+    <span class="ticker-item">Mughal-e-Azam — Hindi Epic</span>
+    <span class="ticker-item">Sassi Punnu — Sindhi Folk</span>
+    <span class="ticker-item">Heer Ranjha — Punjabi Drama</span>
+    <span class="ticker-item">Mirza Ghalib — Hindi Drama</span>
+    <span class="ticker-item">A Midsummer Night's Dream — English</span>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SHOWS SECTION — Language Filter
+============================================================ -->
+<section id="shows">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Performances</span>
+      <h2 class="section-title">Theatre Shows by <em>Language</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Language filter tabs -->
+    <div class="language-tabs">
+      <button class="lang-tab active" data-lang="all">All Shows</button>
+      <button class="lang-tab" data-lang="urdu">🇵🇰 Urdu</button>
+      <button class="lang-tab" data-lang="hindi">🎬 Hindi</button>
+      <button class="lang-tab" data-lang="english">🎭 English</button>
+      <button class="lang-tab" data-lang="sindhi">🌾 Sindhi</button>
+      <button class="lang-tab" data-lang="punjabi">🏔 Punjabi</button>
+    </div>
+
+    <!-- Show cards grid -->
+    <div class="shows-grid" id="showsGrid">
+
+      <div class="show-item" data-lang="urdu">
+         <img src="images/imag1.jpg" alt="" width="400px" height="63%">
+        <div class="show-body">
+          <span class="show-lang-tag">🇵🇰 Urdu Drama</span>
+          <h3>Anarkali</h3>
+          <p>A timeless tale of forbidden love set in the Mughal court. Award-winning direction by Khalid Ahmed.</p>
+          <div class="show-meta">
+            <span>📅 Jun 1–7</span>
+            <span>⏱ 2h 30m</span>
+            <span>🏛 Alhamra</span>
+          </div>
+          <button class="book-btn" onclick="openBooking('Anarkali — Urdu Drama')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="show-item" data-lang="urdu">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5c7CGBlZlg_U9XNZhFApgPPhyXkoUtkS9rXnHnrA42w&s=10" alt="" height="63%">
+        <div class="show-body">  
+          <span class="show-lang-tag">🇵🇰 Urdu Drama</span>
+          <h3>Shairi Ka Safar</h3>
+          <p>A poetic journey through Pakistan's greatest Urdu poetry, brought to life on stage with music and dance.</p>
+          <div class="show-meta">
+            <span>📅 Jun 3–5</span>
+            <span>⏱ 1h 45m</span>
+            <span>🏛 PNCA</span>
+          </div>
+          <button class="book-btn" onclick="openBooking('Shairi Ka Safar — Urdu Drama')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="show-item" data-lang="hindi">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKh4XxIXod6UL48UnEwha-qJ-eSeJTCluV7WUiiCIP-ZsS6kC_H-_mbLkZ&s=10" alt="">
+        <div class="show-body"> 
+          <span class="show-lang-tag">🎬 Hindi Drama</span>
+          <h3>Mirza Ghalib</h3>
+          <p>The legendary poet's life reimagined in a riveting Hindi production featuring live ghazal performances.</p>
+          <div class="show-meta">
+            <span>📅 Jun 8–12</span>
+            <span>⏱ 2h 15m</span>
+            <span>🏛 Arts Theatre</span>
+          </div>
+          <button class="book-btn" onclick="openBooking('Mirza Ghalib — Hindi Drama')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="show-item" data-lang="hindi">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-k9kGcXJRh8Hhj0Hr-0GyHt_TCiw5y1im30BIPEtM6w&s=10" alt="" height="63%">
+        <div class="show-body">
+          <span class="show-lang-tag">🎬 Hindi Drama</span>
+          <h3>Mughal-e-Azam</h3>
+          <p>The grand epic of Mughal Emperor Akbar and Prince Salim's love for Anarkali — a spectacular Hindi production.</p>
+          <div class="show-meta">
+            <span>📅 Jun 14–18</span>
+            <span>⏱ 3h 00m</span>
+            <span>🏛 Alhamra</span>
+          </div>
+          <button class="book-btn" onclick="openBooking('Mughal-e-Azam — Hindi Drama')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="show-item" data-lang="english">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS79eyvot5Zxclgy06TAdSqeyq2K8JWDBkC28J-ArTM-g&s=10" alt="" height="63%">
+        <div class="show-body">
+          <span class="show-lang-tag">🎭 English Drama</span>
+          <h3>Hamlet</h3>
+          <p>Shakespeare's masterpiece performed by the Pakistan National Theatre Ensemble in a modern setting.</p>
+          <div class="show-meta">
+            <span>📅 Jun 5–9</span>
+            <span>⏱ 3h 00m</span>
+            <span>🏛 PNCA</span>
+          </div>
+          <button class="book-btn" onclick="openBooking('Hamlet — English Drama')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="show-item" data-lang="english">
+       <img src="images/image 2.jpg" alt="" height="63%">
+        <div class="show-body">
+          <span class="show-lang-tag">🎭 English Drama</span>
+          <h3>A Midsummer Night's Dream</h3>
+          <p>Shakespeare's enchanting comedy reimagined with a South Asian flair by the National Theatre Ensemble.</p>
+          <div class="show-meta">
+            <span>📅 Jun 22–26</span>
+            <span>⏱ 2h 45m</span>
+            <span>🏛 PNCA</span>
+          </div>
+          <button class="book-btn" onclick="openBooking('A Midsummer Night\'s Dream — English')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="show-item" data-lang="sindhi">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwddLPDmgZr2owfhgQGoAOg2InVQ5xK9XViP5yGGSdivQU4IvlWz3omV7a&s=10" alt="" height="60%"> 
+        <div class="show-body">
+          <span class="show-lang-tag">🌾 Sindhi Folk</span>
+          <h3>Sassi Punnu</h3>
+          <p>The immortal Sindhi love legend staged with traditional music, vibrant costumes, and folk dance.</p>
+          <div class="show-meta">
+            <span>📅 Jun 10–14</span>
+            <span>⏱ 2h 00m</span>
+            <span>🏛 Sindh Culture</span>
+          </div>
+          <button class="book-btn" onclick="openBooking('Sassi Punnu — Sindhi Folk')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="show-item" data-lang="punjabi">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAKep35aHCCvQ4Z9l-kjL6khr5AscUDSfYhX-Wy6mKZw&s=10" alt="" height="60%">
+        <div class="show-body">
+          <span class="show-lang-tag">🏔 Punjabi Drama</span>
+          <h3>Heer Ranjha</h3>
+          <p>Waris Shah's immortal Punjabi romance performed with electrifying energy, folk music, and Bhangra.</p>
+          <div class="show-meta">
+            <span>📅 Jun 15–20</span>
+            <span>⏱ 2h 30m</span>
+            <span>🏛 Lahore Fort</span>
+          </div>
+          <button class="book-btn" onclick="openBooking('Heer Ranjha — Punjabi Drama')">Book Now</button>
+        </div>
+      </div>
+
+    </div><!-- end .shows-grid -->
+
+    <!-- No results message -->
+    <div class="no-shows" id="noShows" style="display:none;">
+      <p>No shows found for this language filter.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     AUDITORIUMS SECTION — With real venue images
+============================================================ -->
+<section id="auditoriums">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Venues</span>
+      <h2 class="section-title">Premier <em>Auditoriums</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="audi-grid">
+
+      <div class="audi-card">
+        <div class="audi-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Gi42LVjBR9NGYbCvvd7mwxi2AZrb154zSw&s"
+               alt="Alhamra Arts Council Lahore">
+        </div>
+        <div class="audi-body">
+          <h3>Alhamra Arts Council</h3>
+          <div class="city">📍 Lahore</div>
+          <p>Pakistan's most iconic theatre venue, hosting 500+ performances annually across three halls.</p>
+          <div class="audi-features">
+            <span class="audi-feat">800 Seats</span>
+            <span class="audi-feat">3 Halls</span>
+            <span class="audi-feat">Parking</span>
+            <span class="audi-feat">Café</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="audi-card">
+        <div class="audi-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdeDR_2VQDPZ6s5YhgmKY_Aj0qaGHjRquMBQ&s"
+               alt="PNCA Auditorium Islamabad"
+              > 
+        </div>
+        <div class="audi-body">
+          <h3>PNCA Auditorium</h3>
+          <div class="city">📍 Islamabad</div>
+          <p>Pakistan National Council of Arts' flagship venue with 600-seat hall and state-of-the-art acoustics.</p>
+          <div class="audi-features">
+            <span class="audi-feat">600 Seats</span>
+            <span class="audi-feat">AC</span>
+            <span class="audi-feat">Wheelchair</span>
+            <span class="audi-feat">VIP Lounge</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="audi-card">
+        <div class="audi-img-wrap">
+          <img src="https://www.artscouncil.org.pk/wp-content/uploads/2019/11/Sabzazar-Arts-Council-Karachi.jpg"
+               alt="Arts Theatre Karachi"
+            >
+        </div>
+        <div class="audi-body">
+          <h3>Arts Theatre Karachi</h3>
+          <div class="city">📍 Karachi</div>
+          <p>A 450-seat intimate venue known for premiering groundbreaking original productions in Karachi.</p>
+          <div class="audi-features">
+            <span class="audi-feat">450 Seats</span>
+            <span class="audi-feat">Studio Stage</span>
+            <span class="audi-feat">Rooftop</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="audi-card">
+        <div class="audi-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotfyv1PrFvxznW3XUjNcRWqWxIhHc2vDBvw&s"
+               alt="Sindh Culture Centre Hyderabad">
+        </div>
+        <div class="audi-body">
+          <h3>Sindh Culture Centre</h3>
+          <div class="city">📍 Hyderabad</div>
+          <p>A 350-seat open-air and indoor hybrid venue celebrating Sindhi folk arts and traditions.</p>
+          <div class="audi-features">
+            <span class="audi-feat">350 Seats</span>
+            <span class="audi-feat">Open Air</span>
+            <span class="audi-feat">Folk Stage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="audi-card">
+        <div class="audi-img-wrap">
+          <img src="https://www.youlinmagazine.com/articles/a-tour-of-lahore-fort-by-walled-city-of-lahore-authority-4.jpg"
+               alt="Lahore Fort Theatr">
+        </div>
+        <div class="audi-body">
+          <h3>Lahore Fort Theatre</h3>
+          <div class="city">📍 Lahore</div>
+          <p>Performances set against majestic Mughal architecture — a UNESCO World Heritage backdrop like no other.</p>
+          <div class="audi-features">
+            <span class="audi-feat">1200 Seats</span>
+            <span class="audi-feat">Outdoor</span>
+            <span class="audi-feat">UNESCO Site</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="audi-card">
+        <div class="audi-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgi8uyAmILvKoMdg2ENfxWpEyux_3aH6yDwA&s"
+                     alt="Quetta Cultural Complex">
+        </div>
+        <div class="audi-body">
+          <h3>Quetta Cultural Complex</h3>
+          <div class="city">📍 Quetta</div>
+          <p>Balochistan's premier arts venue with a 300-seat hall and traditional folk performance spaces.</p>
+          <div class="audi-features">
+            <span class="audi-feat">300 Seats</span>
+            <span class="audi-feat">Cultural Hall</span>
+            <span class="audi-feat">Gallery</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ARTISTS SECTION
+============================================================ -->
+<section id="artists">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Artist Gallery</span>
+      <h2 class="section-title">Celebrated <em>Theatre Artists</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="artists-grid">
+
+      <div class="artist-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR59wB9PoRezEPy1YqOiAlkjYss5N8GoQwlzA&s" alt="Zia Mohyeddin">
+        <h4>Zia Mohyeddin</h4>
+        <div class="role">Director &amp; Actor</div>
+        <div class="lang">Urdu · English</div>
+      </div>
+
+      <div class="artist-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaDZOkCOasoajzfYTL9w2VXOsYPwL_4f4Bg&s" alt="Samina Ahmed">
+        <h4>Samina Ahmed</h4>
+        <div class="role">Actress</div>
+        <div class="lang">Urdu · Punjabi</div>
+      </div>
+
+      <div class="artist-card">
+        <img src="https://i.tribune.com.pk/media/images/Firdous1672291959-0/Firdous1672291959-0.jpg" alt="Firdous Jamal">
+        <h4>Firdous Jamal</h4>
+        <div class="role">Legendary Actor</div>
+        <div class="lang">Urdu · Punjabi</div>
+      </div>
+
+      <div class="artist-card">
+        <img src="https://i.tribune.com.pk/media/images/818200-RahatKazmixvcopy-1420644880/818200-RahatKazmixvcopy-1420644880.jpg" alt="Rahat Kazmi">
+        <h4>Rahat Kazmi</h4>
+        <div class="role">Director &amp; Playwright</div>
+        <div class="lang">Urdu · Hindi</div>
+      </div>
+
+      <div class="artist-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZYrxDBVmzv7CV7q4MgD-ew2w1VF4wwEDEHw&s" alt="Hina Dilpazeer">
+        <h4>Hina Dilpazeer</h4>
+        <div class="role">Comedian &amp; Actress</div>
+        <div class="lang">Urdu · Punjabi</div>
+      </div>
+
+      <div class="artist-card">
+        <img src="https://www.karachiliteraturefestival.com/wp-content/uploads/2020/02/Khalid-Ahmad.jpg" alt="Khalid Ahmed">
+        <h4>Khalid Ahmed</h4>
+        <div class="role">Stage Director</div>
+        <div class="lang">Urdu · Sindhi</div>
+      </div>
+
+      <div class="artist-card">
+        <img src="https://yt3.googleusercontent.com/jVH9m7tLZB2kidZsF3ezgreu8iX6J3HpiOF0GIedsYJV8WrYkP0RIeou8ZIA_DgN817gqQljMg=s900-c-k-c0x00ffffff-no-rj" alt="Naseem Vicky">
+        <h4>Naseem Vicky</h4>
+        <div class="role">Comedian &amp; Actor</div>
+        <div class="lang">Punjabi · Urdu</div>
+      </div>
+
+      <div class="artist-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR69rRVw2cLyTXbpY7XWijiThHjD1q8n3JYjA&s" alt="Saba Faisal">
+        <h4>Saba Faisal</h4>
+        <div class="role">Actress</div>
+        <div class="lang">Urdu · Hindi</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     AWARDS SECTION
+============================================================ -->
+<section id="awards">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Accolades</span>
+      <h2 class="section-title">Theatre <em>Awards &amp; Honours</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="awards-grid">
+      <div class="award-card">
+        <div class="award-year">2024</div>
+        <h4>Best Urdu Drama — Alhamra Excellence Award</h4>
+        <p>Awarded to "Anarkali" for outstanding direction and production design by Khalid Ahmed.</p>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2024</div>
+        <h4>Best Actress — Pakistan Theatre Federation</h4>
+        <p>Samina Ahmed recognised for her extraordinary portrayal in "Aangan Terha" at Alhamra.</p>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2023</div>
+        <h4>Best English Play — PNCA National Award</h4>
+        <p>"A Midsummer Night's Dream" by Pakistan National Theatre Ensemble won Best Production.</p>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2023</div>
+        <h4>Lifetime Achievement — Pakistan Arts Council</h4>
+        <p>Zia Mohyeddin honoured for 50 years of contributions to Urdu and English theatre.</p>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2022</div>
+        <h4>Best Folk Production — Sindh Culture Award</h4>
+        <p>"Sassi Punnu" acclaimed for reviving traditional Sindhi theatrical traditions.</p>
+      </div>
+      <div class="award-card">
+        <div class="award-year">2022</div>
+        <h4>Best Script — National Playwright Competition</h4>
+        <p>Rahat Kazmi's script "Watan ki Mitti" won the prestigious national competition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     REVIEWS SECTION
+============================================================ -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Theatre Speaks</span>
+      <h2 class="section-title">Voices of the <em>Stage</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Anarkali at Alhamra was transcendent. The set design transported us to the Mughal court — I wept at the final act. A must-see for any theatre lover.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">🎭</div>
+          <div class="reviewer-info">
+            <h5>Dr. Asim Raza</h5>
+            <span>Theatre Critic · Dawn News</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Hamlet at PNCA by the National Theatre Ensemble was a revelation. Contemporary staging with deep respect for Shakespeare. Bravo to the entire cast!</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">📰</div>
+          <div class="reviewer-info">
+            <h5>Fatima Bhutto</h5>
+            <span>Author &amp; Arts Columnist</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>Sassi Punnu was a celebration of Sindhi culture at its finest. The folk music was hauntingly beautiful. The Sindh Culture Centre truly comes alive.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">🌾</div>
+          <div class="reviewer-info">
+            <h5>Zulfiqar Mirza</h5>
+            <span>Cultural Correspondent · Geo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     UPCOMING SECTION
+============================================================ -->
+<section id="upcoming">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Schedule</span>
+      <h2 class="section-title">Upcoming <em>Performances</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="upcoming-list">
+      <div class="upcoming-item">
+        <div class="upcoming-date"><div class="day">05</div><div class="month">Jun</div></div>
+        <div class="upcoming-info">
+          <h4>Hamlet — English Drama</h4>
+          <p>Pakistan National Theatre Ensemble · 8:00 PM</p>
+        </div>
+        <div class="upcoming-venue">PNCA Auditorium<span>Islamabad</span></div>
+        <button class="btn-book-inline" onclick="openBooking('Hamlet — English Drama')">Book</button>
+      </div>
+      <div class="upcoming-item">
+        <div class="upcoming-date"><div class="day">08</div><div class="month">Jun</div></div>
+        <div class="upcoming-info">
+          <h4>Mirza Ghalib — Hindi Drama</h4>
+          <p>Raza Theatre Company · 7:30 PM</p>
+        </div>
+        <div class="upcoming-venue">Arts Theatre<span>Karachi</span></div>
+        <button class="btn-book-inline" onclick="openBooking('Mirza Ghalib — Hindi Drama')">Book</button>
+      </div>
+      <div class="upcoming-item">
+        <div class="upcoming-date"><div class="day">10</div><div class="month">Jun</div></div>
+        <div class="upcoming-info">
+          <h4>Sassi Punnu — Sindhi Folk</h4>
+          <p>Sindh Cultural Ensemble · 6:30 PM</p>
+        </div>
+        <div class="upcoming-venue">Sindh Culture Centre<span>Hyderabad</span></div>
+        <button class="btn-book-inline" onclick="openBooking('Sassi Punnu — Sindhi Folk')">Book</button>
+      </div>
+      <div class="upcoming-item">
+        <div class="upcoming-date"><div class="day">15</div><div class="month">Jun</div></div>
+        <div class="upcoming-info">
+          <h4>Heer Ranjha — Punjabi Drama</h4>
+          <p>Punjab Folk Theatre · 7:00 PM</p>
+        </div>
+        <div class="upcoming-venue">Lahore Fort Theatre<span>Lahore</span></div>
+        <button class="btn-book-inline" onclick="openBooking('Heer Ranjha — Punjabi Drama')">Book</button>
+      </div>
+      <div class="upcoming-item">
+        <div class="upcoming-date"><div class="day">20</div><div class="month">Jun</div></div>
+        <div class="upcoming-info">
+          <h4>Aangan Terha — Urdu Comedy</h4>
+          <p>National Theatre Company · 8:00 PM</p>
+        </div>
+        <div class="upcoming-venue">Alhamra Hall 1<span>Lahore</span></div>
+        <button class="btn-book-inline" onclick="openBooking('Aangan Terha — Urdu Comedy')">Book</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     MAGAZINES SECTION — Content & images only, no icons/colors
+============================================================ -->
+<section id="magazines">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Publications</span>
+      <h2 class="section-title">Theatre <em>Magazines</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="mag-grid">
+
+      <div class="mag-card">
+        <div class="mag-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpBRFrrng408XH1G4jdw8dQP_0XwmlVAwllg&s"
+               alt="Stage and Screen Magazine"
+               onerror="this.src='https://images.unsplash.com/photo-1481595357459-84468f6eeaac?w=400&q=80'">
+        </div>
+        <div class="mag-info">
+          <h4>Stage &amp; Screen</h4>
+          <p>Monthly · Pakistan's leading theatre magazine covering productions, artists and reviews.</p>
+        </div>
+      </div>
+
+      <div class="mag-card">
+        <div class="mag-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-lW0J-6cUue9vkCAfqiE_vaIEGBPe_EvPA&s"
+               alt="Drama Digest Magazine"
+               onerror="this.src='https://images.unsplash.com/photo-1481595357459-84468f6eeaac?w=400&q=80'">
+        </div>
+        <div class="mag-info">
+          <h4>Drama Digest</h4>
+          <p>Quarterly · In-depth coverage of Urdu &amp; Hindi productions, interviews and behind-the-scenes features.</p>
+        </div>
+      </div>
+
+      <div class="mag-card">
+        <div class="mag-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJbtWDq8123bFOumzAMaUIpSEz5qdQGGvjXg&s"
+               alt="Arts of Pakistan Magazine"
+               onerror="this.src='https://images.unsplash.com/photo-1481595357459-84468f6eeaac?w=400&q=80'">
+        </div>
+        <div class="mag-info">
+          <h4>Arts of Pakistan</h4>
+          <p>Bi-Monthly · Cultural arts &amp; theatre across all Pakistani traditions and languages.</p>
+        </div>
+      </div>
+
+      <div class="mag-card">
+        <div class="mag-img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQhwt8ZfYeT5Tsz72hthV_yjInXkuUk7lfA&s"
+               alt="Folk Colours Magazine"
+               onerror="this.src='https://images.unsplash.com/photo-1481595357459-84468f6eeaac?w=400&q=80'">
+        </div>
+        <div class="mag-info">
+          <h4>Folk Colours</h4>
+          <p>Quarterly · Celebrating Sindhi &amp; Punjabi folk arts, music, dance and traditional theatre.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FEEDBACK / CONTACT SECTION — Full validation
+============================================================ -->
+<section id="feedback">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Connect</span>
+      <h2 class="section-title">Feedback &amp; <em>Queries</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="feedback-wrap">
+      <form id="contactForm" onsubmit="submitContactForm(event)" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-first">First Name <span class="req">*</span></label>
+            <input type="text" id="c-first" placeholder="Ahmed" autocomplete="given-name">
+            <span class="error-msg" id="cerr-first"></span>
+          </div>
+          <div class="form-group">
+            <label for="c-last">Last Name <span class="req">*</span></label>
+            <input type="text" id="c-last" placeholder="Khan" autocomplete="family-name">
+            <span class="error-msg" id="cerr-last"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="c-email">Email Address <span class="req">*</span></label>
+          <input type="email" id="c-email" placeholder="you@example.com" autocomplete="email">
+          <span class="error-msg" id="cerr-email"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="c-phone">Phone Number</label>
+          <input type="tel" id="c-phone" placeholder="+92 300 0000000" autocomplete="tel">
+          <span class="error-msg" id="cerr-phone"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="c-subject">Subject <span class="req">*</span></label>
+          <select id="c-subject">
+            <option value="">— Select a Subject —</option>
+            <option>General Inquiry</option>
+            <option>Booking Assistance</option>
+            <option>Artist Partnership</option>
+            <option>Venue Information</option>
+            <option>Media &amp; Press</option>
+            <option>Feedback on a Show</option>
+          </select>
+          <span class="error-msg" id="cerr-subject"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="c-message">Message <span class="req">*</span></label>
+          <textarea id="c-message" placeholder="Your message here..." rows="5"></textarea>
+          <span class="error-msg" id="cerr-message"></span>
+        </div>
+
+        <button type="submit" id="contact-submit-btn" class="btn-primary btn-full">
+          Send Message
+        </button>
+
+        <!-- Success message inside form area -->
+        <div class="form-success" id="contactSuccess" style="display:none;">
+          <span>✓</span> Your message has been sent! We'll get back to you soon.
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-brand">
+        <div class="logo-icon">🎭</div>
+        <span>TheatreShow</span>
+      </a>
+      <p>Pakistan's most comprehensive theatre portal — connecting audiences to the finest stage performances across Urdu, Hindi, English, Sindhi and Punjabi traditions.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Shows</h5>
+      <ul>
+        <li><a href="#">Urdu Theatre</a></li>
+        <li><a href="#">Hindi Theatre</a></li>
+        <li><a href="#">English Theatre</a></li>
+        <li><a href="#">Folk Shows</a></li>
+        <li><a href="#">Upcoming Events</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#">Artist Gallery</a></li>
+        <li><a href="#">Auditoriums</a></li>
+        <li><a href="#">Awards</a></li>
+        <li><a href="#">Magazines</a></li>
+        <li><a href="#">Reviews</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Advertise</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 TheatreShow.com — All rights reserved</p>
+    <p>Celebrating the art of live performance across Pakistan</p>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     BOOKING MODAL
+============================================================ -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+    <div class="modal-header">
+      <span class="modal-tag">Secure Booking</span>
+      <h2 id="modal-title">Reserve Your Seats</h2>
+      <button class="modal-close" onclick="closeBooking()" aria-label="Close">✕</button>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="modal-show-info">
+        <div class="show-icon">🎭</div>
+        <div>
+          <h4 id="modal-show-name">Selected Show</h4>
+          <p id="modal-show-details">Please select date &amp; seats below</p>
+        </div>
+      </div>
+
+      <div id="booking-form-content">
+
+        <div class="form-group">
+          <label for="b-name">Full Name <span class="req">*</span></label>
+          <input type="text" id="b-name" placeholder="Ahmed Khan" autocomplete="name">
+          <span class="error-msg" id="err-name"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="b-email">Email <span class="req">*</span></label>
+            <input type="email" id="b-email" placeholder="you@email.com" autocomplete="email">
+            <span class="error-msg" id="err-email"></span>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="b-phone">Phone (optional)</label>
+            <input type="tel" id="b-phone" placeholder="+92 300 0000000" autocomplete="tel">
+            <span class="error-msg" id="err-phone"></span>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top:20px;">
+          <label for="b-date">Performance Date <span class="req">*</span></label>
+          <input type="date" id="b-date">
+          <span class="error-msg" id="err-date"></span>
+        </div>
+
+        <div class="form-group">
+          <label>Select Seat Category <span class="req">*</span></label>
+          <div class="seats-selector">
+            <div class="seat-type" onclick="selectSeat(this, 800)" tabindex="0" role="button" aria-pressed="false">
+              <div class="stype">VIP</div>
+              <div class="sprice">Rs 800</div>
+            </div>
+            <div class="seat-type" onclick="selectSeat(this, 500)" tabindex="0" role="button" aria-pressed="false">
+              <div class="stype">Regular</div>
+              <div class="sprice">Rs 500</div>
+            </div>
+            <div class="seat-type" onclick="selectSeat(this, 300)" tabindex="0" role="button" aria-pressed="false">
+              <div class="stype">Economy</div>
+              <div class="sprice">Rs 300</div>
+            </div>
+          </div>
+          <span class="error-msg" id="err-seat"></span>
+        </div>
+
+        <div class="qty-row">
+          <div class="qty-label">Number of Tickets</div>
+          <div class="qty-ctrl">
+            <button type="button" onclick="changeQty(-1)" aria-label="Decrease quantity">−</button>
+            <div class="qty-val" id="qty-display">1</div>
+            <button type="button" onclick="changeQty(1)" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <div class="total-row">
+          <div class="tlabel">Total Amount</div>
+          <div class="tamount" id="total-display">Rs 0</div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-payment">Payment Method</label>
+          <select id="b-payment">
+            <option>Jazz Cash</option>
+            <option>EasyPaisa</option>
+            <option>Credit / Debit Card</option>
+            <option>Bank Transfer</option>
+            <option>Pay at Venue</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn-primary btn-full" onclick="confirmBooking()">
+          Confirm Booking
+        </button>
+
+      </div><!-- end #booking-form-content -->
+
+      <div class="success-msg" id="success-msg" style="display:none;">
+        <div class="tick">🎉</div>
+        <h3>Booking Confirmed!</h3>
+        <p>Your seats have been reserved successfully.<br>A confirmation has been sent to your email.<br>Enjoy the show!</p>
+        <button type="button" class="btn-primary" style="margin-top:20px;" onclick="closeBooking()">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
